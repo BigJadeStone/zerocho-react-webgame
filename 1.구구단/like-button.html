@@ -13,24 +13,42 @@
 <script type="text/babel">
     'use strict';
 
-    class LikeButton extends React.Component {
-        constructor(props) {
-            super(props);
-            this.state = {liked: false};
+    function LikeButton() { //함수형 컴포넌트 x 함수 컴포넌트 o
+        const [liked, setLiked] = React.useState(false);
+        if (liked) {
+            return "You liked this.";
         }
-        render() {
-            if (this.state.liked) {
-                return "you liked this.";
-            }
+        return (
+            <button onClick={() => {setLiked(true); }}>Like</button>
+        );
+    }
 
-            // return React.createElement('button', {onClick: () => this.setState({liked: true})}, 'Like');
-            return (
-                <button onClick={() => this.setState({liked: true})}>
-                    Like
-                </button>
-            )
-        }
-    } // 1% ErrorBoundary
+    // class LikeButton extends React.Component {
+    //     // constructor(props) {
+    //     //     super(props);
+    //     //     this.state = {liked: false};
+    //     // }
+    //
+    //     onClickButton = () => {
+    //         // this.state.liked = true; // 3. 객체를 함부로 바꾸지 마라, 복사해라(불변성)
+    //         this.setState({liked: true});
+    //     }
+    //
+    //     render() {
+    //         if (this.state.liked) {
+    //             return "you liked this.";
+    //         }
+    //
+    //         // return React.createElement('button', {onClick: () => this.setState({liked: true})}, 'Like');
+    //         return (
+    //             <button onClick={() => {
+    //                 this.setState({liked: true})
+    //             }}>
+    //                 Like
+    //             </button>
+    //         );
+    //     }
+    // } // 클래스형은 1% ErrorBoundary 에서 사용
 </script>
 <script type="text/babel">
 
