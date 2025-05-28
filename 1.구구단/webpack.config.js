@@ -2,8 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  mode: 'development',
-  devtool: 'inline-source-map', // hidden-source-map
+  mode: 'development', //운영시에는 production 으로 바꾸기.
+  devtool: 'inline-source-map', // 개발시에는 eval <> 운영시에는 hidden-source-map
   resolve: {
     extensions: ['.jsx', '.js'],
   },
@@ -29,6 +29,9 @@ module.exports = {
       },
     }],
   },
+  plugins: [
+      new webpack.LoaderOptionsPlugin({ debug: true }),
+  ],
   output: {
     filename: 'app.js',
     path: path.join(__dirname, 'dist'),
