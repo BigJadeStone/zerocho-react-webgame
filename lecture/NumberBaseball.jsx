@@ -2,8 +2,42 @@
 // const { Component } = React;
 import React, { Component } from 'react';
 
-class NumberBaseball extends Component{
+function getNumbers() { // 숫자 네개를 겹치지 않고 랜덤하게 뽑는 함수
 
+}
+
+class NumberBaseball extends Component{
+    state = {
+        result: '',
+        value: '',
+        answer: getNumbers(),
+        tries: [],
+    };
+
+    onSubmitForm = (e) => {
+
+    };
+
+    onChangeInput = (e) => {
+
+    };
+
+    render() {
+        return (
+            <>
+                <h1>{this.state.result}</h1>
+                <form onSubmit={this.onSubmitForm}>
+                    <input maxLength={4} value={this.state.value} onChange={this.onChangeInput} />
+                </form>
+                <div>시도: {this.state.tries.length}</div>
+                <ul>
+                    {[1234,43123,431243,123124,2313].map((val, idx, arr) => {
+                        return <li>{val}</li>;
+                    })}
+                </ul>
+            </>
+        )
+    }
 }
 
 export const hello = 'hello'; // import { hello }
