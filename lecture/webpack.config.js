@@ -17,14 +17,24 @@ module.exports = {
       test: /\.jsx?$/,
       loader: 'babel-loader',
       options: {
-        presets: ['@babel/preset-env', '@babel/preset-react']
-      }
+        presets: ['@babel/preset-env', '@babel/preset-react'],
+        plugins: ['react-refresh/babel']
+      },
+
     }]
   },
-
+  plugins: [
+      new RefreshWebpackPlugin(),
+  ],
   output: {
     path: path.join(__dirname, 'dist'), // C:\\users\zerocho]webstorm\react-webgame\lecture\dist
-    filename: 'app.js'
+    filename: 'app.js',
+    publicPath: '/dist'
   }, //출력
 
+  devServer: {
+    devMiddleware: { publicPath: '/dist' },
+    static: { directory: path.resolve(__dirname) },
+    hot: true,
+  }
 };
