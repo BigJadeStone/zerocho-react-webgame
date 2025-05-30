@@ -1,17 +1,17 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 
-class RenderTest extends Component {
+class RenderTest extends PureComponent {
     state = {
         counter: 0,
     }
 
-    shouldComponentUpdate(nextProps, nextState, nextContext) {
-        if (this.state.counter !== nextState.counter) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+    // shouldComponentUpdate(nextProps, nextState, nextContext) {
+    //     if (this.state.counter !== nextState.counter) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
 
     onClick = () => {
         this.setState({});

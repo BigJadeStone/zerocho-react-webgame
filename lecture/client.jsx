@@ -13,5 +13,9 @@ import ReactDom from 'react-dom/client';
 
 import NumberBaseball from './NumberBaseball';
 import RenderTest from './RenderTest';
+// import MyNumberBaseballClass from "./MyNumberBaseballClass";
+import ResponseCheckClass from "./ResponseCheckClass";
+
 // ReactDom.createRoot(document.querySelector('#root')).render(<NumberBaseball />);
-ReactDom.createRoot(document.querySelector('#root')).render(<RenderTest />);
+// ReactDom.createRoot(document.querySelector('#root')).render(<RenderTest />);
+ReactDom.createRoot(document.querySelector('#root')).render(<ResponseCheckClass />);
