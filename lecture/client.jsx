@@ -13,9 +13,13 @@ import ReactDom from 'react-dom/client';
 
 import NumberBaseball from './NumberBaseball';
 import RenderTest from './RenderTest';
-// import MyNumberBaseballClass from "./MyNumberBaseballClass";
+import MyNumberBaseballClass from "./MyNumberBaseballClass";
 import ResponseCheckHooks from "./ResponseCheckHooks";
+import MyRSPClass from "./MyRSPClass";
+import MyRSPHooks from "./MyRSPHooks";
 
 // ReactDom.createRoot(document.querySelector('#root')).render(<NumberBaseball />);
 // ReactDom.createRoot(document.querySelector('#root')).render(<RenderTest />);
-ReactDom.createRoot(document.querySelector('#root')).render(<ResponseCheckHooks />);
+// ReactDom.createRoot(document.querySelector('#root')).render(<ResponseCheckHooks />);
+// ReactDom.createRoot(document.querySelector('#root')).render(<MyRSPClass />);
+ReactDom.createRoot(document.querySelector('#root')).render(<MyRSPHooks />);

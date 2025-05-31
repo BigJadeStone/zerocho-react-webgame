@@ -54,6 +54,21 @@ const ResponseCheckHooks = memo((props) =>  {
                 {message}
             </div>
             {renderAverage()}
+            <div style={{marginTop: '20px', backgroundColor: 'blue', color:'white', minWidth: '300px', minHeight: '300px'}}>
+                {(() => {
+                    if (1 == 1) {
+                        return <span style={{margin: '20px 0 20px 0', display: 'block'}}> if문 테스트 </span>
+                    }
+                })()}
+                {(() => {
+                    const array = [];
+                    for (let i=0; i < 5; i++) {
+                        array.push(<div key={i}>JSX내 for문 사용하는 법</div>);
+                    }
+                    array.push(<div style={{marginTop: '20px'}}>반복이 되는 tag 내에 반드시 key를 지정해줘야 함.</div>);
+                    return array;
+                })()}
+            </div>
         </>
     )
 });
