@@ -18,9 +18,7 @@ import ResponseCheckHooks from "./ResponseCheckHooks";
 import MyRSPClass from "./MyRSPClass";
 import MyRSPHooks from "./MyRSPHooks";
 import MyLottoClass from "./MyLottoClass";
+import MyLottoHooks from "./MyLottoHooks";
+import MyTicTacToe from "./MyTicTacToe";
 
-// ReactDom.createRoot(document.querySelector('#root')).render(<NumberBaseball />);
-// ReactDom.createRoot(document.querySelector('#root')).render(<RenderTest />);
-// ReactDom.createRoot(document.querySelector('#root')).render(<ResponseCheckHooks />);
-// ReactDom.createRoot(document.querySelector('#root')).render(<MyRSPClass />);
-ReactDom.createRoot(document.querySelector('#root')).render(<MyLottoClass />);
+ReactDom.createRoot(document.querySelector('#root')).render(<MyTicTacToe />);
