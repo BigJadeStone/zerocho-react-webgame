@@ -35,7 +35,6 @@ class MyLottoClass extends Component {
                 });
             }, (i + 1) * 1000);
         }
-
         this.timeouts[6] = setTimeout(() => {
             this.setState({
                 bonus: winNumbers[6],
