@@ -1,12 +1,14 @@
 import React from "react";
-import MyTr from "./MyTr";
+import Tr from "./MyTr";
 
 const MyTable = () => {
 
     return (
-        <>
-
-        </>
+        <table>
+            <tbody>
+                <Tr></Tr>
+            </tbody>
+        </table>
     )
 }
 

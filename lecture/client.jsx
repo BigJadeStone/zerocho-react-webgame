@@ -20,5 +20,6 @@ import MyRSPHooks from "./MyRSPHooks";
 import MyLottoClass from "./MyLottoClass";
 import MyLottoHooks from "./MyLottoHooks";
 import MyTicTacToe from "./MyTicTacToe";
+import MyMineSearch from "./MyMineSearch";
 
-ReactDom.createRoot(document.querySelector('#root')).render(<MyTicTacToe />);
+ReactDom.createRoot(document.querySelector('#root')).render(<MyMineSearch />);

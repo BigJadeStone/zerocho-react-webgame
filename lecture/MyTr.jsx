@@ -1,13 +1,15 @@
-import React from 'react';
-import MyTd from './MyTd'
+import React, {memo, useMemo} from 'react';
+import Td from './MyTd'
 
-const MyTr = () => {
+const MyTr = memo(({ rowData, rowIndex, dispatch}) => {
 
     return (
-        <>
-
-        </>
+        <tr>
+            <Td></Td>
+        </tr>
     )
-}
+});
+
+MyTr.displayName = 'Tr';
 
 export default MyTr;
