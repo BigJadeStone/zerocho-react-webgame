@@ -1,11 +1,15 @@
-import React, {memo, useMemo} from 'react';
+import React, {memo, useMemo, useContext} from 'react';
 import Td from './MyTd'
+import { TableContext } from './MyMineSearch'
 
 const MyTr = memo(({ rowData, rowIndex, dispatch}) => {
+    const {tableData} = useContext(TableContext);
 
     return (
         <tr>
-            <Td></Td>
+            {tableData[0] && Array(tableData[0].length)
+                                .fill()
+                                .map((td, i) => <Td rowIndex={rowIndex} cellIndex={i} />)}
         </tr>
     )
 });
