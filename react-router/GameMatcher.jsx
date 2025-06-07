@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NumberBaseball from '../3.숫자야구/NumberBaseballClass';
-import RSP from '../5.가위바위보/RSPClass';
-import Lotto from '../6.로또/LottoClass';
+import RSP from '../lecture/MyRSPClass';
+import Lotto from '../lecture/MYLottoClass';
 import {useLocation, useNavigate, Routes, Route} from 'react-router';
 
 const GameMatcher = () => {
@@ -13,8 +13,8 @@ const GameMatcher = () => {
   return (
     <Routes>
       <Route path="number-baseball" element={<NumberBaseball />} />
-      <Route path="rock-scissors-paper" element={<RSP />} />
-      <Route path="lotto-generator" element={<Lotto />} />
+      {/*<Route path="rock-scissors-paper" element={<RSP />} />*/}
+      {/*<Route path="lotto-generator" element={<Lotto />} />*/}
       <Route
         path="*"
         element={<div>
