@@ -209,23 +209,41 @@ const reducer = (state, action) => {
                 tableData,
             };
         }
-
-
+        case INCREMENT_TIMER: {
+            return {
+                ...state,
+                timer: state.timer + 1,
+            }
+        }
         default:
             return state;
     }
-}
+};
 
 const MyMineSearch = props => {
     const [state, dispatch] = useReducer(reducer, initialState);
     const { tableData, halted, timer, result } = state;
+
+    useEffect(() => {
+        let timer;
+        if (halted === false) {
+            timer = setInterval(() => {
+                dispatch({ type: INCREMENT_TIMER });
+            }, 1000);
+        }
+        return () => {
+            clearInterval(timer);
+        }
+    }, [halted]);
 
     const value = useMemo(() => ({ tableData, halted, dispatch }), [tableData, halted]);
 
     return (
         <TableContext.Provider value={value}>
             <Form />
+            <div>{timer}</div>
             <Table />
+            <div>{result}</div>
         </TableContext.Provider>
     )
 }
